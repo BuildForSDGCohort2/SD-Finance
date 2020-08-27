@@ -1,0 +1,143 @@
+.hedi {
+	font-family: Century Gothic;
+	font-size: 27px;
+	font-style: normal;
+	font-weight: bold;
+	color: navy;
+}
+
+.hhdd {
+	font-family: Century Gothic;
+	font-size: 23px;
+	font-style: normal;
+	font-weight: bold;
+	color: white;
+	background-color: navy;
+	opacity: 0.81;
+}
+
+.body {
+	background-image: url("images/bg1.jpg");
+}
+
+.txt {
+	font-family: Century Gothic;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: normal;
+	color: black;
+}
+
+.txtw {
+	font-family: Leelawadee;
+	font-size: 19px;
+	font-style: normal;
+	font-weight: bold;
+	color: white;
+}
+
+.btn {
+	font-family: Century Gothic;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: bold;
+	color: black;
+	background-color: white;
+	padding: 8px;
+	border-color: slateblue;
+	border-width: 7px;
+	border-radius: 0px 13px 0px 13px;
+}
+
+.btn2 {
+	font-family: Century Gothic;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: bold;
+	color: white;
+	background-color: RoyalBlue;
+	padding: 8px;
+	border-color: white;
+	border-width: 7px;
+	border-radius: 0px 13px 0px 13px;
+}
+
+.btn:hover {
+	font-size: 17px;
+	background-color: white;
+	/*padding: 6px;*/
+	border-color: navy;
+	border-width: 7px;
+	border-radius: 0px 11px 0px 11px;
+}
+
+.btn2:hover {
+	font-size: 17px;
+	background-color: navy;
+	/*padding: 6px;*/
+	border-color: whitesmoke;
+	border-width: 7px;
+	border-radius: 0px 11px 0px 11px;
+}
+
+.copy {
+	background-color: black;
+	opacity: 0.9;
+	font-family: Century Gothic;
+	font-size: 18px;
+	color: white;
+}
+
+.tdn {
+	font-family: Leelawadee;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: normal;
+	color: black;
+	background-color: white;
+	opacity: 0.97;
+	border-radius: 37px 0px 37px 0px;
+}
+
+.foot {
+	background-color: black;
+	font-family: Century Gothic;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: normal;
+	color: white;
+	opacity: 0.93;
+}
+
+.tfd {
+	font-family: Century Gothic;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: bold;
+	color: black;
+	background-color: white;
+	padding: 8px;
+	border-width: 8px;
+	border-color: orange;
+	border-radius: 21px 0px 21px 0px;
+}
+
+.tfd:focus,.tfd:hover {
+	border-color: RoyalBlue;
+}
+
+/*Staff*/
+.btni {
+  background-color: DodgerBlue; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  font-family: Century Gothic;
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btni:hover {
+  background-color: RoyalBlue;
+}
