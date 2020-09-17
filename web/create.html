@@ -3,6 +3,7 @@
 <title>SD FINANCE</title>
 <link rel="stylesheet" href="style.css" />
 <link rel="shortcut icon" href="images/logo.ico" />
+<script src="command.js"></script>
 </head>
 
 <body class="body">
@@ -44,14 +45,14 @@
 
 <th>
 <table bgcolor="white" border="0" border-color="navy" cellpadding="1" cellspacing="1"> <tr>
-<th align="left"><a href="index.html"><img src="images/logo.png" width="51" height="51" alt="LOGO" /></a> </th>
+<th align="left" class="mmn"><a href="index.html"><img src="images/logo.png" width="51" height="51" alt="LOGO" /></a> </th>
 <th align="left" class="hedi">SD FINANCE</th> </tr>
 </table></th>
 
 <th align="right">
-<form action="sign.html" method="post">
-<button class="btn" type="submit">Sign In</button></th>
-</form>
+    <a href="sign.html">
+<button class="btn">Sign In</button>
+</a></th>
 </tr>
 
 </table>
@@ -67,7 +68,7 @@ RELIABLE FINANCIAL SERVICES OFFERED BY A RELIABLE SERVICE PROVIDER <hr/>
 <li>Keep your funds close to you</li>
 <li>Send money at $0 charge unlimitedly</li>
 <li>Make payments quickly and effectively</li>
-<li>Do your work here and pay or get paid right away</li>
+<li>Have Convenient and secure business discussions</li>
 <li>Withdraw your funds at very low rates</li>
 <li>Access and control your account. Anytime --- Anywhere</li>
 </ul> <hr/>
@@ -87,31 +88,36 @@ RELIABLE FINANCIAL SERVICES OFFERED BY A RELIABLE SERVICE PROVIDER <hr/>
 
 <h4>Please fill all the required fields below</h4><hr/>
 
-<form name="reg" method="post" action="signup">
+<form name="reg" method="post" action="signup" onsubmit="return(validateReg())">
 
-<input type="text" size="27" class="tfd" name="fname" placeholder="First Name" />*<p/>
+<input type="text" size="37" class="tfd" name="fname" placeholder="First Name" />*<p/>
 
-<input type="text" size="27" class="tfd" name="lname" placeholder="Last Name" />*<p/>
+<input type="text" size="37" class="tfd" name="lname" placeholder="Last Name" />*<p/>
 
-<input type="text" size="27" class="tfd" name="email" placeholder="Email" />*<p/>
+<input type="text" size="37" class="tfd" name="email" placeholder="Email" />*<p/>
 
-<input type="text" size="27" class="tfd" name="phone" placeholder="Phone"/>*<p/>
+<input type="text" size="37" class="tfd" name="phone" placeholder="Phone"/>*<p/>
 
 <select name="gender" placeholder="Gender" class="tfd">*
-<option selected >Select Gender</option>
+<option selected value="">Select Gender</option>
 <option value="male">Male</option>
 <option value="female">Female</option>
 </select>*<p/>
 Date Of Birth: <br/>
-<input type="date" size="29" class="tfd" name="email" placeholder="Email" />*<p/>
+<input type="date" size="37" class="tfd" name="dob" placeholder="Date Of Birth" />*<p/>
 
-<input type="text" size="27" class="tfd" name="country" placeholder="Country"/>*<p/>
+<input type="text" size="37" class="tfd" name="country" placeholder="Country"/>*<p/>
 
-<input type="text" size="27" class="tfd" name="address" placeholder="Address"/>*<p/>
+<input type="text" size="37" class="tfd" name="address" placeholder="Address"/>*<p/>
 
-<input type="password" size="27" class="tfd" name="pass" placeholder="Password"/>*<p/>
+<font face="Lucida Fax" size="+0" color="darkred"><b><i>Please choose a strong password below to maximize the security of your account.
+        <br/>[Include digits,uppercase and lowercase letters]</i></b></font><p/>
 
-<input type="password" size="27" class="tfd" name="conpass" placeholder="Confrim Password"/>*<hr/>
+<input type="password" size="37" class="tfd" name="pass" placeholder="Password"/>*<p/>
+
+<input type="password" size="37" class="tfd" name="conpass" placeholder="Confrim Password"/>*<hr/>
+
+<input type="hidden" name="type" value="signup"/>
 
 <!--Agree to the terms and conditions-->
 
@@ -127,8 +133,8 @@ By clicking submit below, you agree to the <a href="terms.html">terms and condit
 
 <table class="tdn" align="center" cellpadding="13" cellspacing="13" width="100%">
 <tr><td align="center" height="91" width="137">
-<form action="index.html">
-<button class="btn" type="submit">GO HOME</button> </form>
+        <a href="index.html">
+<button class="btn" type="submit">GO HOME</button> </a>
 </td></tr>
 </table><p/>
 
