@@ -3,10 +3,11 @@
 <title>SD FINANCE</title>
 <link rel="stylesheet" href="style.css" />
 <link rel="shortcut icon" href="images/logo.ico" />
+<script src="command.js"></script>
 </head>
 
 <body class="body">
-
+    
 <table bgcolor="white" border="1" border-color="navy" cellpadding="3" cellspacing="3" width="100%">
 <tr><td bgcolor="white"></td><td bgcolor="navy"></td><td bgcolor="white"></td><td bgcolor="navy"></td><td bgcolor="white"></td>
 <td bgcolor="navy"></td><td bgcolor="white"></td><td bgcolor="navy"></td><td bgcolor="white"></td><td bgcolor="navy"></td><td bgcolor="white"></td>
@@ -44,14 +45,13 @@
 
 <th>
 <table bgcolor="white" border="0" border-color="navy" cellpadding="1" cellspacing="1"> <tr>
-<th align="left"><a href="index.html"><img src="images/logo.png" width="51" height="51" alt="LOGO" /></a> </th>
+<th align="left" class="mmn"><a href="index.html"><img src="images/logo.png" width="51" height="51" alt="LOGO" /></a> </th>
 <th align="left" class="hedi">SD FINANCE</th> </tr>
 </table></th>
 
 <th align="right">
-<form action="create.html" method="post">
-<button class="btn" type="submit">Sign Up</button>
-</form>
+    <a href="create.html">
+        <button class="btn" type="submit">Sign Up</button></a>
 </th>
 
 </tr>
@@ -69,7 +69,7 @@ RELIABLE FINANCIAL SERVICES OFFERED BY A RELIABLE SERVICE PROVIDER <hr/>
 <li>Keep your funds close to you</li>
 <li>Send money at $0 charge unlimitedly</li>
 <li>Make payments quickly and effectively</li>
-<li>Do your work here and pay or get paid right away</li>
+<li>Have Convenient and secure business discussions</li>
 <li>Withdraw your funds at very low rates</li>
 <li>Access and control your account. Anytime --- Anywhere</li>
 </ul> <hr/>
@@ -85,15 +85,19 @@ RELIABLE FINANCIAL SERVICES OFFERED BY A RELIABLE SERVICE PROVIDER <hr/>
 
 <table border="0" border-color="navy" cellpadding="1" cellspacing="1" width="100%">
 
-<tr><td align="center" valign="top" height="397" class="tdn"><h1>*******</h1><p/>
-<img src="images/logo.png" width="91" height="91" alt="LOGO" />
+    <tr><td align="center" valign="top" height="397" class="tdn"><hr/><font face="Cambria" color="navy" size="+7">*******</font><br/>
+<img src="images/logo.png" width="137" height="137" alt="LOGO" />
 <h4>Sign In with your registered email and valid password</h4><hr/>
 
-<form method="post" name="log" action="login">
+<form name="log" method="post" action="signup" onsubmit="return(validateSign())">
 
-<input type="text" name="user" placeholder="Email" size="27" class="tfd" /><p/>
+<input type="text" name="user" placeholder="Email" size="37" class="tfd" /><p/>
 
-<input type="password" name="pass" placeholder="Password" size="27" class="tfd" /><hr/>
+<input type="password" name="pass" placeholder="Password" size="37" class="tfd" /><hr/>
+
+<a href="forgot"><font face="Century Gothic" color="navy" size="+1"><b>Forgot Password</b></font></a><p/>
+
+<input type="hidden" name="type" value="signin"/>
 
 <button type="submit" class="btn">Sign In</button><hr/>
 
@@ -105,8 +109,8 @@ RELIABLE FINANCIAL SERVICES OFFERED BY A RELIABLE SERVICE PROVIDER <hr/>
 
 <table class="tdn" align="center" cellpadding="13" cellspacing="13" width="100%">
 <tr><td align="center" height="91" width="137">
-<form action="index.html">
-<button class="btn" type="submit">GO HOME</button> </form>
+        <a href="index.html">
+            <button class="btn" type="submit">GO HOME</button></a>
 </td></tr>
 </table><p/>
 
