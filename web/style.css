@@ -25,7 +25,7 @@
 	font-size: 17px;
 	font-style: normal;
 	font-weight: normal;
-	color: black;
+	color: white;
 }
 
 .txtw {
@@ -34,7 +34,9 @@
 	font-style: normal;
 	font-weight: bold;
 	color: white;
+	background-color: navy;
 }
+
 
 .btn {
 	font-family: Century Gothic;
@@ -69,6 +71,7 @@
 	border-color: navy;
 	border-width: 7px;
 	border-radius: 0px 11px 0px 11px;
+        box-shadow: 3px 9px 17px 3px lightslategrey;
 }
 
 .btn2:hover {
@@ -78,6 +81,7 @@
 	border-color: whitesmoke;
 	border-width: 7px;
 	border-radius: 0px 11px 0px 11px;
+        box-shadow: 3px 9px 17px 3px lightslategrey;
 }
 
 .copy {
@@ -124,6 +128,7 @@
 
 .tfd:focus,.tfd:hover {
 	border-color: RoyalBlue;
+        box-shadow: 3px 9px 17px 3px lightslategrey;
 }
 
 /*Staff*/
@@ -131,7 +136,7 @@
   background-color: DodgerBlue; /* Blue background */
   border: none; /* Remove borders */
   color: white; /* White text */
-  padding: 12px 16px; /* Some padding */
+  padding: 16px 20px; /* Some padding */
   font-size: 16px; /* Set a font size */
   font-family: Century Gothic;
   cursor: pointer; /* Mouse pointer on hover */
@@ -140,4 +145,56 @@
 /* Darker background on mouse-over */
 .btni:hover {
   background-color: RoyalBlue;
+}
+
+
+/*Am gona handle menu button here*/
+.dropbtn {
+  background-color: white;
+  color: white;
+  border-radius: 21px 0px 21px 0px;
+  border-color: royalblue;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: whitesmoke;
+  border-color: navy;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: navy;
+  min-width: 160px;
+  box-shadow: 3px 9px 17px 3px lightslategrey;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 13px 17px;
+  text-decoration: none;
+  display: block;
+  font-family: Century Gothic;
+  font-size: 17px;
+}
+
+.dropdown-content a:hover {background-color: royalblue;}
+
+.show {display:block;}
+
+/*menu style and hov*/
+.mmn {
+    background-color: white;
+}
+
+.mmn:hover {
+    /*background-color: lightgrey;*/
+    box-shadow: 3px 9px 17px 3px lightslategrey;
 }
