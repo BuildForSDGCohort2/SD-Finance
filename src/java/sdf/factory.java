@@ -144,7 +144,7 @@ public class factory {
 "<td align=\"left\" valign=\"center\" height=\"173\">\n" +
 "Muwanguzi Silas<br/>Seumx Plus<br/>#BuildForSDG [Andela | FACEBOOK]<hr/>+256 704029977<br/>+256 787029977\n" +
 "<hr/>silas.seal7@gmail.com<br/>info.seumxplus@gmail.com<hr/>\n" +
-"Jinja, Uganda, Africa\n" +
+"Namwendwa, Kamuli, Uganda, Africa\n" +
 "</td>\n" +
 "<td align=\"left\" valign=\"center\" height=\"173\">\n" +
 "<a href=\"about.html\" type=\"self\" class=\"foot\">About Us</a><p/>\n" +
@@ -154,8 +154,8 @@ public class factory {
 "<td align=\"left\" valign=\"center\" height=\"173\">\n" +
 "<a href=\"fees.html\" type=\"self\" class=\"foot\">Fees and rating</a><p/>\n" +
 "<a href=\"terms.html\" type=\"self\" class=\"foot\">Terms and Conditions</a><p/>\n" +
-"<a href=\"policy.html\" type=\"self\" class=\"foot\">Policy</a><p/>\n" +
-"<a href=\"future.html\" type=\"self\" class=\"foot\">Looking to the Future</a>\n" +
+"Policy<p/>\n" +
+"Looking to the Future\n" +
 "</td>\n" +
 "</tr>\n" +
 "\n" +
