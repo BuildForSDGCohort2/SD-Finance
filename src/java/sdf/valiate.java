@@ -83,6 +83,7 @@ public class valiate extends HttpServlet {
         //send
         sd.send(); 
         
+        
         //create the page body content
         body="<hr/>We Just sent a CODE to "+user+". Please check your inbox and spam messages and  enter the code in the field below to continue.<p/>"
                             + "<form name=\"ecode\" method=\"post\" action=\"valiate\" onsubmit=\"return(valiate())\">"
@@ -107,6 +108,8 @@ public class valiate extends HttpServlet {
                         
                         //Let proceed
                         pst3.executeUpdate();
+                        
+                        notifyme m=new notifyme(); m.doNofify("Verification Success!", "Not Captured", user, "No Captured");
                         
                         response.sendRedirect("login");
                         
