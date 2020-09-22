@@ -186,6 +186,13 @@ public class withdraw extends HttpServlet {
                                             + rs5.getString("service")+" has been successfully submitted. Please wait while we complete your "
                                             + "transaction in a few moments.<hr/><a href=\"withdraw\"><button class=\"btn2\">OK</button></a>";
                                     
+                                    
+                                    try {
+                notifyme m=new notifyme(); m.doNofify("Withdraw", dt, user, platform);
+                }catch (Exception ex) {
+                    System.out.println(ex.getMessage());
+                }
+                                    
                                     } 
                                     
                                     else {
