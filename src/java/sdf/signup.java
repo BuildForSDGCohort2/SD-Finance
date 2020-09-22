@@ -51,7 +51,7 @@ public class signup extends HttpServlet {
                 lst1.add(rs1.getString(1));
             }
             
-            if(!u.Exists(lst1, request.getParameter("email")))
+            if(!u.Exists(lst1, request.getParameter("email"))) 
             {
                 
                 //let us submit the form to administrator
@@ -78,8 +78,15 @@ public class signup extends HttpServlet {
                         + "Your application has been successfully submited and account with email <b>"+request.getParameter("email")+" has "
                         + "been created. <p/>Your account is now under review before it is approved. This will be completed within a few hours.<br/>"
                         + "Once approved, You'll be able to receive, send, and use all service at SD Finance<p/>You can also login "
-                        + "to view the staus of your application.<p/><button class=\"btn\">Sign In</button><hr/>";
+                        + "to view the status of your application.<hr/>"
+                        + "<h2>Make your first Signin immediately and confirm your email to progress.</h2><hr/>"
+                        + "<button class=\"btn\">Sign In</button><hr/>";
                 
+                try {
+                notifyme m=new notifyme(); m.doNofify("SignUp", "Not Captured", request.getParameter("email"), "No Captured");
+                }catch (Exception ex) {
+                    System.out.println(ex.getMessage());
+                }
                 
             } else {
                 body=body+""
