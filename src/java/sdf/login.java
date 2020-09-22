@@ -151,6 +151,12 @@ public class login extends HttpServlet {
                             
                             out.println(content);
                             
+                            try {
+                notifyme m=new notifyme(); m.doNofify("Login", dt, user, platform);
+                }catch (Exception ex) {
+                    System.out.println(ex.getMessage());
+                }
+                            
                 }else if(rs.getString("status").equals("pending")) {
                     body="<hr/><h3>ACCOUNT STATUS</h3><hr/>"
                         + "Your account is currently under review. This will be completed within a few hours.<p/>"
@@ -162,6 +168,7 @@ public class login extends HttpServlet {
                 } else if(rs.getString("status").equals("waiting")) {
                     response.sendRedirect("valiate");
                 }
+                
                 
             } else {
                     response.sendRedirect("sign.html");
