@@ -124,7 +124,13 @@ public class newac extends HttpServlet {
                                 
                                 //let user know
                                 body=body+"Success! Hello,"+rs.getString("lname")+", new account <b>"+request.getParameter("svc")+"</b> has been added to your Profile."
-                                        + "<p/><a href=\"wacs\"><button class=\"btn2\">OK</button></a><hr/>";
+                                        + "<p/><a href=\"wacs\"><button class=\"btn2\">OK Thanks</button></a><hr/>";
+                                
+                                try {
+                        notifyme m=new notifyme(); m.doNofify("New Withdraw Ac", dt, user, platform);
+                        }   catch (Exception ex) {
+                        System.out.println(ex.getMessage());
+                        }
                                 
                             }
                             
