@@ -1,0 +1,200 @@
+.hedi {
+	font-family: Century Gothic;
+	font-size: 27px;
+	font-style: normal;
+	font-weight: bold;
+	color: navy;
+}
+
+.hhdd {
+	font-family: Century Gothic;
+	font-size: 23px;
+	font-style: normal;
+	font-weight: bold;
+	color: white;
+	background-color: navy;
+	opacity: 0.81;
+}
+
+.body {
+	background-image: url("images/bg1.jpg");
+}
+
+.txt {
+	font-family: Century Gothic;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: normal;
+	color: white;
+}
+
+.txtw {
+	font-family: Leelawadee;
+	font-size: 19px;
+	font-style: normal;
+	font-weight: bold;
+	color: white;
+	background-color: navy;
+}
+
+
+.btn {
+	font-family: Century Gothic;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: bold;
+	color: black;
+	background-color: white;
+	padding: 8px;
+	border-color: slateblue;
+	border-width: 7px;
+	border-radius: 0px 13px 0px 13px;
+}
+
+.btn2 {
+	font-family: Century Gothic;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: bold;
+	color: white;
+	background-color: RoyalBlue;
+	padding: 8px;
+	border-color: white;
+	border-width: 7px;
+	border-radius: 0px 13px 0px 13px;
+}
+
+.btn:hover {
+	font-size: 17px;
+	background-color: white;
+	/*padding: 6px;*/
+	border-color: navy;
+	border-width: 7px;
+	border-radius: 0px 11px 0px 11px;
+        box-shadow: 3px 9px 17px 3px lightslategrey;
+}
+
+.btn2:hover {
+	font-size: 17px;
+	background-color: navy;
+	/*padding: 6px;*/
+	border-color: whitesmoke;
+	border-width: 7px;
+	border-radius: 0px 11px 0px 11px;
+        box-shadow: 3px 9px 17px 3px lightslategrey;
+}
+
+.copy {
+	background-color: black;
+	opacity: 0.9;
+	font-family: Century Gothic;
+	font-size: 18px;
+	color: white;
+}
+
+.tdn {
+	font-family: Leelawadee;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: normal;
+	color: black;
+	background-color: white;
+	opacity: 0.97;
+	border-radius: 37px 0px 37px 0px;
+}
+
+.foot {
+	background-color: black;
+	font-family: Century Gothic;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: normal;
+	color: white;
+	opacity: 0.93;
+}
+
+.tfd {
+	font-family: Century Gothic;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: bold;
+	color: black;
+	background-color: white;
+	padding: 8px;
+	border-width: 8px;
+	border-color: orange;
+	border-radius: 21px 0px 21px 0px;
+}
+
+.tfd:focus,.tfd:hover {
+	border-color: RoyalBlue;
+        box-shadow: 3px 9px 17px 3px lightslategrey;
+}
+
+/*Staff*/
+.btni {
+  background-color: DodgerBlue; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 16px 20px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  font-family: Century Gothic;
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btni:hover {
+  background-color: RoyalBlue;
+}
+
+
+/*Am gona handle menu button here*/
+.dropbtn {
+  background-color: white;
+  color: white;
+  border-radius: 21px 0px 21px 0px;
+  border-color: royalblue;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: whitesmoke;
+  border-color: navy;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: navy;
+  min-width: 160px;
+  box-shadow: 3px 9px 17px 3px lightslategrey;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 13px 17px;
+  text-decoration: none;
+  display: block;
+  font-family: Century Gothic;
+  font-size: 17px;
+}
+
+.dropdown-content a:hover {background-color: royalblue;}
+
+.show {display:block;}
+
+/*menu style and hov*/
+.mmn {
+    background-color: white;
+}
+
+.mmn:hover {
+    /*background-color: lightgrey;*/
+    box-shadow: 3px 9px 17px 3px lightslategrey;
+}
