@@ -1,0 +1,105 @@
+
+package paymentapi;
+
+import java.io.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.*;
+import jakarta.servlet.http.*;
+
+import java.sql.*;
+
+/**
+ *
+ * @author Seumx Plus
+ */
+@WebServlet(name = "checkout", urlPatterns = {"/checkout"})
+public class checkout extends HttpServlet {
+
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        response.setContentType("text/html;charset=UTF-8");
+        
+        String content="<html><head><title>SD FINANCE</title><link rel=\"shortcut icon\" href=\"images/logo.ico\" /> "
+                + "</head><body bgcolor=\"lightslategrey\">"
+                + "<center><table border=\"8\" bordercolor=\"blueviolet\" bgcolor=\"whitesmoke\" width=\"100%\" cellpadding=\"8\" "
+                + "cellspacing=\"8\">"
+                + "<tr><th height=\"51\" bgcolor=\"navy\"></th></tr>"
+                + "<tr><th bgcolor=\"darkslateblue\"><hr/><img src=\"images/logo.png\" width=\"113\" height=\"113\" /><hr/>"
+                + "<font face=\"Century Gothic\" size=\"+3\" color=\"white\">SD Finance : Payments</font></th></tr>"
+                + "<tr><th height=\"317\" class=\"trn\">";
+        
+        String company=null;
+        
+        try {
+        sdf.factory u=new sdf.factory();
+        Class.forName("com.mysql.jdbc.Driver");
+        Connection con=DriverManager.getConnection(u.host,u.user,u.password);
+        PreparedStatement pst3=con.prepareStatement("select *from marchant where ID=?");
+        pst3.setString(1,request.getParameter("ID")); ResultSet rs3=pst3.executeQuery();
+        
+        if(rs3.next()) {
+            company=rs3.getString("Company");
+        }
+        
+                } catch(SQLException | ClassNotFoundException ex){
+                    System.out.println(ex.getMessage());
+                }
+                
+        if(request.getParameter("ID")!=null && request.getParameter("Item")!=null) {
+            if(request.getParameter("Amount")!=null && request.getParameter("returnlink")!=null) {
+                if(request.getParameter("successlink")!=null) {
+                    
+                    content=content+"<font face=\"Century Gothic\" size=\"+1\" color=\"navy\">"
+                            + "<h3>Details</h3>"
+                            + "Item : "+request.getParameter("Item")+"<p/>"
+                            + "Amount : "+request.getParameter("Amount")+"<p/>"
+                            + "Paying to : "+company+"<hr/>"
+                            
+                            + "Enter Email and Password to Complete Your Payment Now<p/>"
+                            + "<form name=\"payi\" action=\"payinow\" method=\"post\" onsubmit=\"return(vlpnow())\">"
+                            + "<input type=\"text\" size=\"41\" placeholder=\"Enter Your Email\" name=\"email\" /><p/>"
+                            + "<input type=\"password\" size=\"41\" placeholder=\"Enter Your Password\" name=\"pass\" /><p/>"
+                            
+                            //more capture
+                            + "<input type=\"hidden\" name=\"ID\" value=\""+request.getParameter("ID")+"\" />"
+                            + "<input type=\"hidden\" name=\"Item\" value=\""+request.getParameter("Item")+"\" />"
+                            + "<input type=\"hidden\" name=\"Amount\" value=\""+request.getParameter("Amount")+"\" />"
+                            + "<input type=\"hidden\" name=\"returnlink\" value=\""+request.getParameter("returnlink")+"\" />"
+                            + "<input type=\"hidden\" name=\"successlink\" value=\""+request.getParameter("successlink")+"\" />"
+                            
+                            
+                            + "<button type=\"submit\" style=\"background-color: darkslateblue; padding: 16px; border-radius: 17px 0px 17px 0px;"
+                            + "border-width:13px; border-color:lightslategrey;\"><font face=\"Cambria\" size=\"+1\" color=\"white\">PayNow</font></button>"
+                            + "</form><hr/>"
+                            + "</font>";
+                    
+                }
+            }
+        }
+                
+                content=content+ "</th></tr></table><hr/></body>";
+        
+        try (PrintWriter out = response.getWriter()) {
+            out.println(content);
+        }
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    @Override
+    public String getServletInfo() {
+        return "Payments";
+    }
+
+}
