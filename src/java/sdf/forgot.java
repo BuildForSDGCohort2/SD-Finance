@@ -92,8 +92,8 @@ public class forgot extends HttpServlet {
         try {
         //prepare
         Sender sd=new Sender("smtp.gmail.com");
-        sd.setFro("info.seumxplus@gmail.com"); sd.setTo(request.getParameter("emailo"));
-        sd.setUser("info.seumxplus@gmail.com"); sd.setPass("absolute13");
+        sd.setFro(""); sd.setTo(request.getParameter("emailo"));
+        sd.setUser(""); sd.setPass("");
         sd.setSubject("SD Finance - Verification Code"); sd.setContent(mail); sd.arrange();
         
         //send
