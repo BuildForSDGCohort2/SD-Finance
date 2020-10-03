@@ -204,21 +204,14 @@ public class factory {
 "  </div>\n" +
 "</div>";
     
-    /*
     //Database Connection creditntials
     public String host="jdbc:mysql://localhost:3306/sdfinance";
     
     public String user="root";
     
     public String password="seumx123";
-    */
     
-    public String host="jdbc:mysql://mysql-13356-0.cloudclusters.net:13356/sdfinance";
-    
-    public String user="seumx";
-    
-    public String password="absolute";
-    
+
     //Here we will do some templating to the mail <mail message>
     
     public String mail1="<html>\n" +
