@@ -165,6 +165,15 @@ function wit() {
     return (true);
 }
 
+function depvlo() {
+    if(document.dep.cool.value==="") {
+        alert("Please enter amount value greater than 0!");
+        document.dep.cool.focus();
+        return false;
+    }
+    return (true);
+}
+
 function newvl() {
     if(document.new.type.value==="") {
         alert("Please select account type e.g. Phone,Bank or Paypal");
@@ -276,6 +285,72 @@ function rrsstt() {
         alert("Please provide your email");
         document.reset.emailo.focus();
         return false;
+    }
+    return (true);
+}
+
+function crtpl() {
+    if(document.payrol.pname.value==="") {
+        alert("Please enter Payroll Name!");
+        document.payrol.pname.focus();
+        return false;
+    }
+    if(document.payrol.com.value==="") {
+        alert("Please enter Payroll Company!");
+        document.payrol.com.focus();
+        return false;
+    }
+    return (true);
+}
+
+function addpl() {
+    if(document.adp.fname.value==="") {
+        alert("Please provide Full Names");
+        document.adp.fname.focus();
+        return false;
+    }
+    if(document.adp.tit.value==="") {
+        alert("Please provide Title");
+        document.adp.tit.focus();
+        return false;
+    }
+    if(document.adp.amt.value<1) {
+        alert("Please provide Amount greater or equal to 1.00");
+        document.adp.amt.focus();
+        return false;
+    }
+    if(document.adp.mail.value==="") {
+        alert("Please provide Email");
+        document.adp.mail.focus();
+        return false;
+    }
+    return (true);
+}
+
+function newappvl() {
+    if(document.newapp.mname.value==="") {
+        alert("Please provide App Name!");
+        document.newapp.mname.focus();
+        return false;
+    }
+    if(document.newapp.co.value==="") {
+        alert("Please provide Company Name!");
+        document.newapp.co.focus();
+        return false;
+    }
+    return (true);
+}
+
+function vlpnow() {
+    if(document.payi.email.value==="") {
+        alert("Provide Your Email!");
+        document.payi.email.focus();
+        return false();
+    }
+    if(document.payi.pass.value==="") {
+        alert("Provide Your Password!");
+        document.payi.pass.focus();
+        return false();
     }
     return (true);
 }
