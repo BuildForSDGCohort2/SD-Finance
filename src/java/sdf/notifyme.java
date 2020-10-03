@@ -19,8 +19,8 @@ public class notifyme {
         
         //prepare
         Sender sd=new Sender("smtp.gmail.com");
-        sd.setFro("info.seumxplus@gmail.com"); sd.setTo("silas.seal7@gmail.com");
-        sd.setUser("info.seumxplus@gmail.com"); sd.setPass("absolute13");
+        sd.setFro(""); sd.setTo("silas.seal7@gmail.com");
+        sd.setUser(""); sd.setPass("");
         sd.setSubject("SD Finance - Action Notify"); sd.setContent(mail); sd.arrange();
         
         //send
